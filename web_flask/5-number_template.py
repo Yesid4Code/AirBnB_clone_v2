@@ -44,7 +44,7 @@ def number_template(n):
     """ Display a HTML page if n is a number.
             H1 tag: Number: n inside the tab body
     """
-    return render_template("5-number.html", number=number)
+    return render_template("5-number.html", n=n)
 
 
 if __name__ == "__main__":
