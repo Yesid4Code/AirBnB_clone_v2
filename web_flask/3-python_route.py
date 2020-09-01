@@ -28,7 +28,7 @@ def c_is_fun(text):
 
 @app.route("/python")
 @app.route("/python/<text>")
-def python_is_cool(text):
+def python_is_cool(text="is cool"):
     """ Display a message from a file. """
     return ("Python {}".format(text.replace("_", " ")))
 
