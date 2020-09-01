@@ -3,7 +3,7 @@
     Script that start a Flask web application
     listening on 0.0.0.0 port 5000.
 """
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 app.url_map.stric_slashes = False
 
