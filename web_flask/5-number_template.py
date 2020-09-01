@@ -39,7 +39,7 @@ def is_number(n):
     return ("{} is a number".format(n))
 
 
-@app.route("/number_template/<init:n>")
+@app.route("/number_template/<int:n>")
 def number_template(n):
     """ Display a HTML page if n is a number.
             H1 tag: Number: n inside the tab body
