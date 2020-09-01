@@ -13,6 +13,7 @@ def display_hello():
     """ Display a message. """
     return "Hello HBNB!"
 
+
 @app.route("/hbnb")
 def display_hbnb():
     """ Display a message. """
