@@ -23,7 +23,7 @@ class State(BaseModel, Base):
             """Attribute that returns the list of City."""
             list_cities = []
             all_cities = models.storage.all(City)
-            for city_o in all_cities:
+            for id_city, city_o in all_cities.items():
                 if self.id == city_o.state_id:
                     list_cities.append(city_o)
             return list_cities
