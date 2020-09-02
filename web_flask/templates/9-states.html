@@ -4,17 +4,21 @@
     <TITLE>HBNB</TITLE>
   </HEAD>
   <BODY>
-    <H1>States</H1>
+    {% if state is none %}
+    <H1>Not found!</H1>
+    {% elif id is none %}
     <UL>
-      {% for state in states | sort(attribute="name") %}
+      {% for state in states_dic.values() | sort(attribute="name") %}
       <LI>{{ state.id }}: <B>{{ state.name }}</B>
-	<UL>
-	  {% for city in state.cities | sort(attribute="name") %}
-	  <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
-	  {% endfor %}
-	</UL>
-      </Li>
+	{% endfor %}
+    </UL>
+    {% else %}
+      <H1></H1>
+    <UL>
+      {% for city in state.cities | sort(attribute="name") %}
+      <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
       {% endfor %}
     </UL>
+    {% endif %}
   </BODY>
 </HTML>
