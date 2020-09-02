@@ -19,12 +19,13 @@ def teardown(self):
 @app.route("/states/<id>", strict_slashes=False)
 def states_id(id=None):
     """ List all states and cities. """
-    states = storage.all(State).values()
-    if id:
-        id = "State.{}".format(id)
-        if id in states.keys():
-            state = states[id]
-    return render_template("9-states.html", states=states)
+    states = None
+    states_dic = storage.all(State)
+    state_id = "State.{}".format(id)
+    if state_id in states_dic.keys():
+        states = states_dic[state_id]
+    return render_template("9-states.html", states=states,
+                           id=id, states_dic=states_dic)
 
 
 if __name__ == "__main__":
