@@ -9,7 +9,7 @@
     {% elif id is none %}
     <UL>
       {% for state in states_dic.values() | sort(attribute="name") %}
-      <LI>{{ state.id }}: <B>{{ state.name }}</B>
+      <LI>{{ state.id }}: <B>{{ state.name }}</B></LI>
 	{% endfor %}
     </UL>
     {% else %}
