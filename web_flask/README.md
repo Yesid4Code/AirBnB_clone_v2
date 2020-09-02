@@ -1,4 +1,4 @@
-# Flas as Web Framework
+# Flask as Web Framework
 
 ## Objectives with this project.
 * What is a Web Framework
