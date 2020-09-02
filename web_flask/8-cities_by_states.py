@@ -15,7 +15,7 @@ def teardown(self):
     storage.close()
 
 
-@app.route("/citiest_by_states", strict_slashes=False)
+@app.route("/cities_by_states", strict_slashes=False)
 def states_and_cities():
     """ List all states and cities. """
     states = storage.all(State).values()
