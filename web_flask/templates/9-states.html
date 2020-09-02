@@ -4,7 +4,7 @@
     <TITLE>HBNB</TITLE>
   </HEAD>
   <BODY>
-    {% if states is none %}
+    {% if states is not defined %}
     <H1>Not found!</H1>
     {% elif id is none %}
     <H1>States</H1>
