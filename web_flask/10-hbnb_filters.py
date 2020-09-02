@@ -4,6 +4,7 @@
     listening on 0.0.0.0 port 5000.
 """
 from flask import Flask, render_template
+from models.amenity import Amenity
 from models.state import State
 from models import storage
 app = Flask(__name__)
