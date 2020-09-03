@@ -56,7 +56,12 @@ button:hover {
     border-radius: 4px;
     padding: 10% 0;
     display: none;
+    overflow: auto;
+    max-height: 300px;
 }
+
+.popover::-webkit-scrollbar {
+    display: none;
 
 .locations:hover .popover, .amenities:hover .popover {
     display: block;
